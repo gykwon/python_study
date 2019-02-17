@@ -1,53 +1,47 @@
-#1. 결과가 다른것은 print(not 'ABC') > False
-print(not False)
-print(not 0)
-print(not None)
-print(not 'ABC')
+#1. 함수호출 결과는? 3,1
+def min(a,b):
+    result = a
 
-#2. 결과가 True 인것은 print(True and not False)
-print(True and False)
-print(True and not False)
-print(False and not False)
+    if(a>b):
+        result = b
 
-#3. 실행결과는?
-a=0
-if a:
-    print("1")
-else:
-    print("2")
+    return result
+
+print(min(3,4))
+print(min(11,1))
 
 
-#4. 별찍기
-for i in range(1,6):
-    print('*'*i)
+#2. 옳지않은 호출 코드는? print_personnel(position='인턴')
+
+def print_personnel(name, position='staff',nationality='Korea'):
+    print('name = {0}'.format(name))
+    print('position = {0}'.format(position))
+    print('nationality = {0}.format(nationality')
 
 
-for i in range(1,6):
-    for j in range(i):
-        print('*' , end='')
-    print()
-#5.
-
-for i in range(5,0,-1):
-    print('*' * i)
+print_personnel(name='dost')
+print_personnel(name='dost',nationality='ROK')
+print_personnel(name='dost',position='인턴')
+print_personnel('dost',position='인턴')
+#print_personnel(position='인턴')
 
 
-for i in range(5,0,-1):
-    for j in range(i):
-        print('*', end='')
-    print()
+#3. 입력받은 수의 평균을 구하는 average() 함수를 구현하세요
+
+def average(*num):
+
+    return sum(num) / len(num)
 
 
+print(average(1,2,3,4,5,6,7,8))
 
-x = int(input("몇 줄 출력할까요??"))
+#4. result의 값은 무엇인가? 이유는? None, 참인 값이 없어서
+def plus_or_minus(arg):
+    if arg < 0:
+        return 'minus'
 
-for i in range(1,x+1):
-    for j in range(i):
-        print('*',end='')
-    print()
+    elif arg > 0:
+        return 'plus'
 
 
-
-y = int(input("몇 줄 출력할까??"))
-for i in range(1,y+1):
-    print('*' * i)
+print(plus_or_minus(0))
