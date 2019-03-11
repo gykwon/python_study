@@ -14,7 +14,11 @@ try:
     print("Enter로 구분하여 숫자를 입력하세요")
 
     for i in range(int(num)):
+
         input_num = input()
+        if not input_num.isnumeric():
+            raise Exception("숫자를 입력하라니까요?? 왜 {0}를 입력하셨어요??".format(input_num))
+
         my_list.append(int(input_num))
 
 
@@ -32,6 +36,8 @@ except ValueError:
 except IndexError:
     print("추출 실패ㅜㅜ index를 초과 했어요...")
 
+except Exception as msg:
+    print(msg)
 
 
 else:
