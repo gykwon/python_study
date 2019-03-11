@@ -25,10 +25,17 @@ try:
     print_element(my_list,idx)
 
 
-
 except ValueError:
     print("Error : 숫자를 입력하세요")
 
 
 except IndexError:
-    print("index를 초과 하였습니다.")
+    print("추출 실패ㅜㅜ index를 초과 했어요...")
+
+
+
+else:
+    print("추출 성공~~^^")
+
+finally:
+    print("재밌죠?? 다시 한번 해보세요~~")
